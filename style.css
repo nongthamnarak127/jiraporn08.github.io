@@ -1,55 +1,30 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>คำนวณ VAT 7%</title>
-
-<style>
-    body{
-        font-family: Arial, sans-serif;
-        text-align:center;
-        margin-top:50px;
-    }
-    input, button{
-        padding:10px;
-        font-size:16px;
-        margin:5px;
-    }
-    #result{
-        margin-top:20px;
-        font-size:20px;
-        font-weight:bold;
-    }
-</style>
-</head>
-<body>
-
-<h1>คำนวณ VAT 7%</h1>
-
-<input type="number" id="price" placeholder="กรอกราคา">
-<button onclick="calculateVAT()">คำนวณ</button>
-
-<div id="result"></div>
-
-<script>
-function calculateVAT() {
-    let price = parseFloat(document.getElementById("price").value);
-
-    if (isNaN(price)) {
-        document.getElementById("result").innerHTML = "กรุณากรอกราคา";
-        return;
-    }
-
-    let vat = price * 0.07;
-    let total = price + vat;
-
-    document.getElementById("result").innerHTML =
-        `ราคาเดิม: ${price.toFixed(2)} บาท<br>
-         VAT 7%: ${vat.toFixed(2)} บาท<br>
-         ราคารวม VAT: ${total.toFixed(2)} บาท`;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
-</script>
 
-</body>
-</html>
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
